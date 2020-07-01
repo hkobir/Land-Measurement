@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rPane2" prefHeight="560.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="landmeasurement.UnitStageController">
+   <children>
+      <AnchorPane layoutX="107.0" layoutY="108.0" prefHeight="145.0" prefWidth="388.0" style="-fx-border-color: #000000; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+         <children>
+            <Label layoutX="27.0" layoutY="14.0" text="435.6 Square feet  = 1 Decimal" textFill="#070117">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="45.0" text="1.5 Decimal = 1 Kora" textFill="#070117">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="71.0" text="4 Kora = 1 Gonda" textFill="#070117">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="101.0" text="20 Gonda = 1 Kani" textFill="#070117">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="107.0" layoutY="308.0" prefHeight="175.0" prefWidth="388.0" style="-fx-border-color: #000000; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+         <children>
+            <Label layoutX="27.0" layoutY="14.0" text="6 Decimal = 1 Gonda" textFill="#070117">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="45.0" text="120 Decimal = 1 Kani" textFill="#070117">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="71.0" text="653.4 Square feet = 1 Kora" textFill="#070117">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="101.0" text="2,613.6 Square feet = 1 Gonda" textFill="#070117">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="132.0" text="52,272 Square feet = 1 Kani" textFill="#070117">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="backImage" fitHeight="30.0" fitWidth="39.0" layoutX="3.0" layoutY="3.0" onMousePressed="#closeUnit" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@assets/img/back.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="197.0" layoutY="14.0" style="-fx-text-fill: maroon; -fx-background-color: yellow; -fx-padding: 3px; -fx-background-radius: 8px; -fx-border-radius: 8px;" text="Sai Kani (120 Decimal is 1 Kani)">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

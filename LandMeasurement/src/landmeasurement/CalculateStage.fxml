@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rPane3" prefHeight="560.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="landmeasurement.CalculateStageController">
+   <children>
+      <AnchorPane layoutX="155.0" layoutY="360.0" prefHeight="167.0" prefWidth="291.0" style="-fx-background-color: #e3e3e3; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: orange;">
+         <children>
+            <Label fx:id="result1" alignment="CENTER" layoutX="17.0" layoutY="20.0" prefHeight="21.0" prefWidth="186.0" style="-fx-background-color: #FFF0F5; -fx-padding: 2px;" text="0" />
+            <Label layoutX="232.0" layoutY="20.0" prefHeight="17.0" prefWidth="47.0" style="-fx-text-fill: blue;" text="Sq. feet" />
+            <Label fx:id="result2" alignment="CENTER" layoutX="17.0" layoutY="46.0" prefHeight="21.0" prefWidth="186.0" style="-fx-background-color: #F8F8FF; -fx-padding: 2px;" text="0" />
+            <Label layoutX="232.0" layoutY="46.0" prefHeight="17.0" prefWidth="47.0" style="-fx-text-fill: blue;" text="Decim" />
+            <Label fx:id="result3" alignment="CENTER" layoutX="17.0" layoutY="72.0" prefHeight="21.0" prefWidth="186.0" style="-fx-background-color: #F0F8FF; -fx-padding: 2px;" text="0" />
+            <Label layoutX="232.0" layoutY="72.0" prefHeight="17.0" prefWidth="47.0" style="-fx-text-fill: blue;" text="Kora" />
+            <Label fx:id="result4" alignment="CENTER" layoutX="17.0" layoutY="100.0" prefHeight="21.0" prefWidth="186.0" style="-fx-background-color: #E0FFFF; -fx-padding: 2px;" text="0" />
+            <Label layoutX="232.0" layoutY="100.0" prefHeight="17.0" prefWidth="47.0" style="-fx-text-fill: blue;" text="Gonda" />
+            <Label fx:id="result5" alignment="CENTER" layoutX="17.0" layoutY="127.0" prefHeight="21.0" prefWidth="186.0" style="-fx-background-color: #FFFFF0; -fx-padding: 2px;" text="0" />
+            <Label layoutX="232.0" layoutY="127.0" prefHeight="17.0" prefWidth="47.0" style="-fx-text-fill: blue;" text="Kani" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="l1" layoutX="129.0" layoutY="130.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-radius: 10px; -fx-border-color: green; -fx-border-radius: 10px;" />
+      <TextField fx:id="w1" layoutX="129.0" layoutY="186.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-radius: 10px; -fx-border-color: green; -fx-border-radius: 10px;" />
+      <TextField fx:id="l2" layoutX="381.0" layoutY="130.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-radius: 10px; -fx-border-color: green; -fx-border-radius: 10px;" />
+      <TextField fx:id="w2" layoutX="381.0" layoutY="186.0" prefHeight="25.0" prefWidth="135.0" style="-fx-background-radius: 10px; -fx-border-color: green; -fx-border-radius: 10px;" />
+      <Label layoutX="75.0" layoutY="134.0" style="-fx-font-weight: normal;" text="Length1" textFill="#04045e">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="190.0" style="-fx-font-weight: normal;" text="Width1" textFill="#04045e">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="326.0" layoutY="134.0" style="-fx-font-weight: normal;" text="Length2" textFill="#04045e">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="326.0" layoutY="190.0" style="-fx-font-weight: normal;" text="Width2" textFill="#04045e">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="149.0" layoutY="71.0" style="-fx-text-fill: maroon;" text="Note: length and width unit should be represent in (Feet)" />
+      <ImageView fitHeight="43.0" fitWidth="47.0" layoutX="271.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/img/compass.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="271.0" layoutY="335.0" style="-fx-text-fill: orange; -fx-border-color: orange; -fx-border-radius: 5px; -fx-label-padding: 3px;" text="Output" />
+      <ImageView fx:id="backImg" fitHeight="37.0" fitWidth="42.0" layoutX="2.0" layoutY="1.0" onMousePressed="#goBack" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@assets/img/back.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="138.0" layoutY="249.0" mnemonicParsing="false" onAction="#calculate" prefHeight="29.0" prefWidth="152.0" style="-fx-background-color: black; -fx-text-fill: #ffffff; -fx-background-radius: 8px; -fx-border-color: #ffffff; -fx-border-radius: 8px; -fx-cursor: hand;" text="Calculate">
+         <font>
+            <Font name="Gadugi" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="313.0" layoutY="249.0" mnemonicParsing="false" onAction="#clearField" prefHeight="31.0" prefWidth="152.0" style="-fx-background-color: red; -fx-text-fill: #ffffff; -fx-background-radius: 8px; -fx-border-color: #ffffff; -fx-border-radius: 8px; -fx-cursor: hand;" text="Clear">
+         <font>
+            <Font name="Gadugi" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

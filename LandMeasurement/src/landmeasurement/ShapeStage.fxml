@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="560.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="landmeasurement.ShapeStageController">
+   <children>
+      <Label layoutX="185.0" layoutY="16.0" style="-fx-text-fill: maroon; -fx-border-color: maroon; -fx-padding: 3px; -fx-border-radius: 5px;" text="Convert Unit From Different forms">
+         <font>
+            <Font name="NSimSun" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="value" layoutX="131.0" layoutY="117.0" onAction="#convertUnit" onKeyPressed="#convertUnit" onKeyReleased="#convertUnit" prefHeight="25.0" prefWidth="135.0" style="-fx-background-radius: 10px; -fx-border-color: green; -fx-border-radius: 10px;" />
+      <ComboBox fx:id="unitBox" layoutX="319.0" layoutY="118.0" onAction="#convertUnit" prefWidth="150.0" style="-fx-border-color: orange; -fx-border-radius: 8px; -fx-background-radius: 8px;" />
+      <AnchorPane layoutX="165.0" layoutY="278.0" prefHeight="167.0" prefWidth="291.0" style="-fx-background-color: #e3e3e3; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: orange;">
+         <children>
+            <Label fx:id="result1" alignment="CENTER" layoutX="17.0" layoutY="20.0" prefHeight="21.0" prefWidth="186.0" style="-fx-background-color: #FFF0F5; -fx-padding: 2px;" text="0" />
+            <Label layoutX="232.0" layoutY="20.0" prefHeight="17.0" prefWidth="47.0" style="-fx-text-fill: blue;" text="Sq. feet" />
+            <Label fx:id="result2" alignment="CENTER" layoutX="17.0" layoutY="46.0" prefHeight="21.0" prefWidth="186.0" style="-fx-background-color: #F8F8FF; -fx-padding: 2px;" text="0" />
+            <Label layoutX="232.0" layoutY="46.0" prefHeight="17.0" prefWidth="47.0" style="-fx-text-fill: blue;" text="Decim" />
+            <Label fx:id="result3" alignment="CENTER" layoutX="17.0" layoutY="72.0" prefHeight="21.0" prefWidth="186.0" style="-fx-background-color: #F0F8FF; -fx-padding: 2px;" text="0" />
+            <Label layoutX="232.0" layoutY="72.0" prefHeight="17.0" prefWidth="47.0" style="-fx-text-fill: blue;" text="Kora" />
+            <Label fx:id="result4" alignment="CENTER" layoutX="17.0" layoutY="100.0" prefHeight="21.0" prefWidth="186.0" style="-fx-background-color: #E0FFFF; -fx-padding: 2px;" text="0" />
+            <Label layoutX="232.0" layoutY="100.0" prefHeight="17.0" prefWidth="47.0" style="-fx-text-fill: blue;" text="Gonda" />
+            <Label fx:id="result5" alignment="CENTER" layoutX="17.0" layoutY="127.0" prefHeight="21.0" prefWidth="186.0" style="-fx-background-color: #FFFFF0; -fx-padding: 2px;" text="0" />
+            <Label layoutX="232.0" layoutY="127.0" prefHeight="17.0" prefWidth="47.0" style="-fx-text-fill: blue;" text="Kani" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="281.0" layoutY="253.0" style="-fx-text-fill: orange; -fx-border-color: orange; -fx-border-radius: 5px; -fx-label-padding: 3px;" text="Output" />
+      <ImageView fx:id="backImage" fitHeight="30.0" fitWidth="39.0" layoutX="6.0" layoutY="10.0" onMousePressed="#closeShape" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+         <image>
+            <Image url="@assets/img/back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
