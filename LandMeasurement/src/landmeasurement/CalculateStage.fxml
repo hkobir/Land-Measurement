@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="rPane3" prefHeight="560.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="landmeasurement.CalculateStageController">
+<AnchorPane id="AnchorPane" fx:id="rPane3" prefHeight="560.0" prefWidth="600.0" style="-fx-background-color: #fafafa;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="landmeasurement.CalculateStageController">
    <children>
       <AnchorPane layoutX="155.0" layoutY="360.0" prefHeight="167.0" prefWidth="291.0" style="-fx-background-color: #e3e3e3; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-border-color: orange;">
          <children>
@@ -55,7 +55,7 @@
          </image>
       </ImageView>
       <Label layoutX="271.0" layoutY="335.0" style="-fx-text-fill: orange; -fx-border-color: orange; -fx-border-radius: 5px; -fx-label-padding: 3px;" text="Output" />
-      <ImageView fx:id="backImg" fitHeight="37.0" fitWidth="42.0" layoutX="2.0" layoutY="1.0" onMousePressed="#goBack" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+      <ImageView fx:id="backImg" fitHeight="31.0" fitWidth="43.0" layoutX="5.0" layoutY="4.0" onMousePressed="#goBack" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
          <image>
             <Image url="@assets/img/back.png" />
          </image>

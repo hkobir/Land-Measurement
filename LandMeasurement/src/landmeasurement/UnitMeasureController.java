@@ -84,10 +84,21 @@ public class UnitMeasureController implements Initializable {
 
     }
 
-    public void convertUnit() throws IOException{
+    public void convertUnit() throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("ShapeStage.fxml"));
         rootPane.getChildren().setAll(pane);
     }
+
+    public void formulaView() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("FormulaStage.fxml"));
+        rootPane.getChildren().setAll(pane);
+    }
+
+    public void unknownShape() throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("UnknownShapeStage.fxml"));
+        rootPane.getChildren().setAll(pane);
+    }
+
     @FXML
     public void changeArrow() {
 

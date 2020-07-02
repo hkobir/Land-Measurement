@@ -34,7 +34,6 @@ public class UnitStageController implements Initializable {
     /**
      * Initializes the controller class.
      */
-
     @FXML
     public void closeUnit() throws IOException {
 //        Stage stage = (Stage) backImage.getScene().getWindow();
@@ -49,7 +48,7 @@ public class UnitStageController implements Initializable {
 //        primaryStage.initStyle(StageStyle.UTILITY);
 //        primaryStage.show();
 
-AnchorPane pane = FXMLLoader.load(getClass().getResource("UnitMeasure.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("UnitMeasure.fxml"));
         rPane2.getChildren().setAll(pane);
 
     }

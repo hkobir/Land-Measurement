@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="560.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="landmeasurement.ShapeStageController">
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="560.0" prefWidth="600.0" style="-fx-background-color: #fafafa;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="landmeasurement.ShapeStageController">
    <children>
       <Label layoutX="185.0" layoutY="16.0" style="-fx-text-fill: maroon; -fx-border-color: maroon; -fx-padding: 3px; -fx-border-radius: 5px;" text="Convert Unit From Different forms">
          <font>
