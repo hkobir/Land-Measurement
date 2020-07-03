@@ -1,19 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package landmeasurement;
 
+import com.sun.javafx.application.LauncherImpl;
 import java.io.IOException;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+import javafx.application.Preloader;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -24,24 +18,39 @@ import javafx.stage.StageStyle;
  */
 public class LandMeasurement extends Application {
 
+    private static final int COUNT_LIMIT = 5;
+
     @Override
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("UnitMeasure.fxml"));
 
         Scene scene = new Scene(root, Color.TRANSPARENT);
-        String css = LandMeasurement.class.getResource("unitmeasure.css").toExternalForm();
-        scene.getStylesheets().add(css);
         primaryStage.setScene(scene);
         primaryStage.initStyle(StageStyle.UTILITY);
         primaryStage.setTitle("Land Measurement(HK's Lab)");
         primaryStage.show();
+
     }
 
-    /**
-     * @param args the command line arguments
-     */
+    
+ 
+          @Override
+    public void init() throws Exception {       
+        
+        // Perform some heavy lifting (i.e. database start, check for application updates, etc. )
+        for (int i = 1; i <= COUNT_LIMIT; i++) {
+            double progress =(double) i/COUNT_LIMIT;
+            System.out.println("progress: " +  progress);            
+            LauncherImpl.notifyPreloader(this, new Preloader.ProgressNotification(progress));
+            Thread.sleep(2000);
+        }
+        
+    }
+    
+    
     public static void main(String[] args) {
-        launch(args);
+        System.out.println("Main fun is called");
+        LauncherImpl.launchApplication(LandMeasurement.class, MyPreloader.class, args);
     }
 
 }

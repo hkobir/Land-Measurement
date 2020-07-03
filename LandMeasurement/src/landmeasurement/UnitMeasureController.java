@@ -5,30 +5,18 @@
  */
 package landmeasurement;
 
-import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
-import javafx.scene.paint.Color;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import javax.swing.JOptionPane;
 
-/**
- * FXML Controller class
- *
- * @author rafid
- */
+
 public class UnitMeasureController implements Initializable {
 
     @FXML
@@ -36,15 +24,22 @@ public class UnitMeasureController implements Initializable {
     @FXML
     private javafx.scene.layout.AnchorPane unitLabel;
 
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    @FXML
+    private javafx.scene.control.Label progress;
 
+    public static Label label;
+
+    @FXML
+    private javafx.scene.control.ProgressBar progressBar;
+
+    public static ProgressBar statProgressBar;
+
+    public UnitMeasureController() {
+        System.out.println("controller called");
     }
 
+    
+    
     @FXML
     public void unitStage() throws IOException {
 //        Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -105,6 +100,14 @@ public class UnitMeasureController implements Initializable {
         unitLabel.setCursor(Cursor.HAND);
         String style = "-fx-background-color: #000000;";
         unitLabel.setStyle(style);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        System.out.println("Initialization done.");
+        label = progress;
+        statProgressBar = progressBar;
+        //progress.setText("Downloading...");
     }
 
 }
